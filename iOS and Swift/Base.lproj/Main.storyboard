@@ -54,35 +54,24 @@
                                             <constraint firstItem="9DH-RX-KKe" firstAttribute="centerY" secondItem="HJB-2o-qsl" secondAttribute="centerY" id="nkh-sS-bZE"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z61-HM-VOg" userLabel="BottomView">
-                                        <rect key="frame" x="0.0" y="527.33333333333337" width="390" height="154.66666666666663"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNK-F5-gwS">
-                                                <rect key="frame" x="145" y="52.333333333333258" width="100" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="4Xq-8E-eNG"/>
-                                                    <constraint firstAttribute="height" constant="50" id="5D8-ln-HUA"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Roll">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQB-fD-Vt8"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWS-jT-CdJ" userLabel="rollButton">
+                                        <rect key="frame" x="119.33333333333333" y="527.33333333333337" width="151.33333333333337" height="154.66666666666663"/>
                                         <constraints>
-                                            <constraint firstItem="wNK-F5-gwS" firstAttribute="centerX" secondItem="Z61-HM-VOg" secondAttribute="centerX" id="2wK-Jr-AAo"/>
-                                            <constraint firstItem="wNK-F5-gwS" firstAttribute="centerY" secondItem="Z61-HM-VOg" secondAttribute="centerY" id="6Q8-tf-PR5"/>
-                                            <constraint firstItem="wNK-F5-gwS" firstAttribute="centerX" secondItem="Z61-HM-VOg" secondAttribute="centerX" id="JIP-5W-39O"/>
-                                            <constraint firstItem="wNK-F5-gwS" firstAttribute="centerY" secondItem="Z61-HM-VOg" secondAttribute="centerY" id="Spj-14-brJ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Wdk-Wx-g91"/>
+                                            <constraint firstAttribute="height" constant="50" id="e5e-A6-N7z"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Roll Dices">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8OD-mv-5Nw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -100,8 +89,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstDiceImageView" destination="vdu-bZ-SIb" id="Dqy-Gd-BZd"/>
-                        <outlet property="secondDiceImageView" destination="ppy-ab-MJE" id="kua-T7-iyC"/>
+                        <outlet property="firstDiceImageView" destination="vdu-bZ-SIb" id="5c9-ie-4b4"/>
+                        <outlet property="secondDiceImageView" destination="ppy-ab-MJE" id="r2d-Z9-xea"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,6 +104,9 @@
         <image name="dice2" width="100" height="100"/>
         <image name="diceeLogo" width="196" height="128"/>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

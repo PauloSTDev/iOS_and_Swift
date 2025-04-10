@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondDiceImageView: UIImageView!
     
     // Connection of roll button in main
-    @IBAction func rollButtonPressed(_ sender: Any) {
+    @IBAction func onPressed(_ sender: UIButton) {
         let  diceArray = [UIImage(imageLiteralResourceName: "dice1"),
                          UIImage(imageLiteralResourceName: "dice2"),
                          UIImage(imageLiteralResourceName: "dice3"),
