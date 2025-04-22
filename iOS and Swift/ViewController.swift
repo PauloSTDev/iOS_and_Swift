@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     
     let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 7]
     var timer = Timer()
+    var player: AVAudioPlayer!
     var totalTime = 0
     var secondsPassed = 0
     
@@ -41,9 +43,18 @@ class ViewController: UIViewController {
         else {
             timer.invalidate()
             titleLabel.text = "Done!"
+            playSound(soundName: "alarm_sound")
+            
         }
         
     }
+    
+    func playSound(soundName: String) {
+            let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+            player = try! AVAudioPlayer(contentsOf: url!)
+            player.play()
+            
+        }
     
 }
 
